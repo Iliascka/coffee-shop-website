@@ -33,6 +33,7 @@
 .about__content {
   max-width: 660px;
   margin: 19px 0 0;
+  z-index: 1;
 }
 
 .about__circle {
@@ -43,6 +44,7 @@
   position: absolute;
   top: -152px;
   left: -129px;
+  z-index: 0;
 }
 .about__circle_animation_blurred {
   animation: pulsate 1.3s ease-in-out 0s infinite;

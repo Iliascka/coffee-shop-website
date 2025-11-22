@@ -44,12 +44,11 @@
   box-shadow: none;
   cursor: pointer;
   border: none;
-  transition: background-color 1s ease-in, box-shadow 0.4s ease-in-out;
+  transition: background-color 1s ease-in;
 }
 
 .form__button:hover {
   background-color: #3f96f3;
-  box-shadow: 0 4px 8px #0120423f;
 }
 
 .form__checkbox {
@@ -57,7 +56,6 @@
   width: 20px;
   height: 20px;
   accent-color: #1878dc;
-  background-image: url();
 }
 
 .form__label_type_checkbox {

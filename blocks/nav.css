@@ -23,6 +23,7 @@
   font-weight: 500;
   line-height: 20px;
   transition: opacity 0.3s ease-in-out;
+  color: #000000;
 }
 
 .nav__link:hover {
