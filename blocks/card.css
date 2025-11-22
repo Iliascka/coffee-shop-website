@@ -9,11 +9,13 @@
   font-size: 20px;
   line-height: 30px;
 }
+
 .card__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+
 .card__list-item {
   margin-bottom: 16px;
   display: flex;
@@ -23,6 +25,7 @@
   line-height: 20px;
   align-items: baseline;
 }
+
 .card__list-item:last-child {
   margin: 0;
 }

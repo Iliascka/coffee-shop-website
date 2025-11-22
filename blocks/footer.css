@@ -44,6 +44,7 @@
   line-height: 20px;
   transition: opacity 0.3s ease-in-out;
 }
+
 .footer__social-link:hover {
   opacity: 0.7;
 }
