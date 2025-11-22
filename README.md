@@ -1,6 +1,27 @@
 # Triple Peaks Coffee Shop
 
-This is the second project of the Software Engineering program at TripleTen. It was created using HTML and CSS, based on the design brief.
+This project is the second assignment in the Software Engineering program at TripleTen.
+It is a landing page built using semantic HTML5, CSS, and a Flat BEM file structure.
+
+## Project Structure
+
+The webpage is divided into five main sections, each created as an individual block and styled with its own CSS file:
+
+- **Header**  
+  Contains the navigation menu and introductory content.
+
+- **Recipes**  
+  Displays two featured coffee recipes inside styled recipe cards.
+
+- **Book a Table** (Form section)  
+  A custom HTML form where users can enter their name, number of guests, date, and email.
+  Includes the structure required for form validation.
+
+- **Menu**  
+  A multi-column café menu built with Flexbox, list dividers, and BEM classes.
+
+- **About / Contacts**  
+  Provides information about the café and includes animated decorative elements created with CSS keyframes.
 
 ## Project features
 
@@ -13,4 +34,7 @@ This is the second project of the Software Engineering program at TripleTen. It 
 
 ## Plan on improving the project
 
-Add your ideas here :)
+- Add responsiveness for tablet and mobile devices
+- Add JavaScript to make sections dynamic
+- Add form validation for the booking form
+- Add a dark mode option
