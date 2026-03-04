@@ -32,9 +32,16 @@ The webpage is divided into five main sections, each created as an individual bl
 - A custom form
 - CSS animation and transform
 
-## Plan on improving the project
+## Project Preview
 
-- Add responsiveness for tablet and mobile devices
-- Add JavaScript to make sections dynamic
-- Add form validation for the booking form
-- Add a dark mode option
+### Homepage & Recipes
+
+![Homepage & Recipes](images/a_homepage&recipes.png)
+
+### Reservation Form
+
+![Reservation Form](images/b_reserevation-form.png)
+
+### Menu & Footer
+
+![Menu & Footer](images/c_menu&footer.png)
