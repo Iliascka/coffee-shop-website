@@ -29,7 +29,7 @@ The webpage is divided into five main sections, each created as an individual bl
 - Flexbox
 - Positioning
 - Flat BEM file structure
-- A custom form
+- JavaScript form validation
 - CSS animation and transform
 
 ## Project Preview
