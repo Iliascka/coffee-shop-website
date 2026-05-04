@@ -45,3 +45,7 @@ The webpage is divided into five main sections, each created as an individual bl
 ### Menu & Footer
 
 ![Menu & Footer](images/c_menu&footer.png)
+
+## GitHub Page
+
+https://iliascka.github.io/coffee-shop-website/
