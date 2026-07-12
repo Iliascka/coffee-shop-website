@@ -1,21 +1,17 @@
-# Triple Peaks Coffee Shop
+git# React + Vite
 
-This project is the second assignment in the Software Engineering program at TripleTen.
-It is a landing page built using semantic HTML5, CSS, and a Flat BEM file structure.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Project Structure
+Currently, two official plugins are available:
 
-The webpage is divided into five main sections, each created as an individual block and styled with its own CSS file:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- **Header**  
-  Contains the navigation menu and introductory content.
+## React Compiler
 
-- **Recipes**  
-  Displays two featured coffee recipes inside styled recipe cards.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- **Book a Table** (Form section)  
-  A custom HTML form where users can enter their name, number of guests, date, and email.
-  Includes the structure required for form validation.
+## Expanding the ESLint configuration
 
 - **Menu**  
   A multi-column café menu built with Flexbox, list dividers, and BEM classes.
