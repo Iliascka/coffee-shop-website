@@ -1,31 +1,31 @@
 function Footer() {
   return (
-    <footer id="contacts" class="footer">
-      <div class="footer__content">
+    <footer id="contacts" className="footer">
+      <div className="footer__content">
         <img
           src="./images/logo_coffeeshop_light.svg"
           alt="Triple Peaks logo coffeeshop"
-          class="footer__logo"
+          className="footer__logo"
         />
-        <div class="footer__column">
-          <h4 class="footer__social-heading">Social media</h4>
-          <ul class="footer__list">
-            <li class="footer__list-item">
-              <a href="#" class="footer__social-link">
+        <div className="footer__column">
+          <h4 className="footer__social-heading">Social media</h4>
+          <ul className="footer__list">
+            <li className="footer__list-item">
+              <a href="#" className="footer__social-link">
                 <img
                   src="./images/facebook_white.svg"
                   alt="Facebook-icon"
-                  class="footer__social-icon"
+                  className="footer__social-icon"
                 />
                 Facebook
               </a>
             </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__social-link">
+            <li className="footer__list-item">
+              <a href="#" className="footer__social-link">
                 <img
                   src="./images/instagram_white.svg"
                   alt="Instagram-icon"
-                  class="footer__social-icon"
+                  className="footer__social-icon"
                 />
                 Instagram
               </a>
@@ -33,7 +33,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <p class="footer__copyright">&copy; 2025 Ilias Katsantonis</p>
+      <p className="footer__copyright">&copy; 2025 Ilias Katsantonis</p>
     </footer>
   );
 }

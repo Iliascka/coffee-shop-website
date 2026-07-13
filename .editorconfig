@@ -25,7 +25,7 @@ charset = utf-8
 # Possible values - true, false
 trim_trailing_whitespace = true
 
-# Disable for Markdown because trailing whitespace is significant
+# Disable htmlFor Markdown because trailing whitespace is significant
 [*.md]
 trim_trailing_whitespace = false
 
