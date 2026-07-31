@@ -18,10 +18,36 @@ function ReservationForm() {
     }));
   }
 
+  const [errors, setErrors] = useState({
+    name: "",
+    guests: "",
+    date: "",
+    email: "",
+    isChecked: "",
+  });
+
+  const newErrors = {
+    name: values.name.trim() === "" ? "Please provide valid name" : "",
+    email: values.email.trim() === "" ? "Please provide a valid email" : "",
+    guests: values.guests === "" ? "Please select guests" : "",
+    date: values.date === "" ? "Please provide the date" : "",
+    isChecked: !values.isChecked ? "Please accept the terms" : "",
+  };
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    setErrors(newErrors);
+  }
+  console.log("message", errors);
+
   return (
     <section id="book-a-table" className="reservation">
       <h2 className="reservation__title">Book a table</h2>
-      <form className="reservation__form form" noValidate>
+      <form
+        onSubmit={handleSubmit}
+        className="reservation__form form"
+        noValidate
+      >
         <fieldset className="form__fieldset">
           <label htmlFor="name-input" className="form__label">
             Name *
@@ -37,8 +63,7 @@ function ReservationForm() {
               value={values.name}
               onChange={handleChange}
             />
-            {}
-            <span className="name-input-error form__error"></span>
+            <span className="name-input-error form__error">{errors.name}</span>
           </label>
           <label htmlFor="guests-input" className="form__label">
             Number of Guests *
@@ -54,7 +79,9 @@ function ReservationForm() {
               onChange={handleChange}
               required
             />
-            <span className="guests-input-error form__error"></span>
+            <span className="guests-input-error form__error">
+              {errors.guests}
+            </span>
           </label>
           <label htmlFor="datetime-input" className="form__label">
             Date & Time *
@@ -67,7 +94,9 @@ function ReservationForm() {
               onChange={handleChange}
               required
             />
-            <span className="datetime-input-error form__error"></span>
+            <span className="datetime-input-error form__error">
+              {errors.date}
+            </span>
           </label>
           <label htmlFor="email-input" className="form__label">
             Your email *
@@ -81,7 +110,9 @@ function ReservationForm() {
               onChange={handleChange}
               required
             />
-            <span className="email-input-error form__error"></span>
+            <span className="email-input-error form__error">
+              {errors.email}
+            </span>
           </label>
         </fieldset>
         <button type="sumbit" className="form__button">
@@ -101,7 +132,7 @@ function ReservationForm() {
             required
           />
           I agree with the terms of use
-          <span className="checkbox-error form__error"></span>
+          <span className="checkbox-error form__error">{errors.isChecked}</span>
         </label>
       </form>
     </section>
