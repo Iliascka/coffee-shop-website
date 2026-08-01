@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ReservationForm.css";
 
 function ReservationForm() {
   const [values, setValues] = useState({
@@ -38,7 +39,6 @@ function ReservationForm() {
     evt.preventDefault();
     setErrors(newErrors);
   }
-  console.log("message", errors);
 
   return (
     <section id="book-a-table" className="reservation">
@@ -52,8 +52,8 @@ function ReservationForm() {
           <label htmlFor="name-input" className="form__label">
             Name *
             <input
+              className={`form__input ${errors.name ? "form-input_type-error" : ""}`}
               id="name-input"
-              className="form__input"
               type="text"
               placeholder="Name Surname"
               minLength="4"
@@ -63,13 +63,17 @@ function ReservationForm() {
               value={values.name}
               onChange={handleChange}
             />
-            <span className="name-input-error form__error">{errors.name}</span>
+            <span
+              className={`form__input-error ${errors.name ? "form-input-error_visible " : ""}`}
+            >
+              {errors.name}
+            </span>
           </label>
           <label htmlFor="guests-input" className="form__label">
             Number of Guests *
             <input
+              className={`form__input ${errors.name ? "form-input_type-error" : ""}`}
               id="guests-input"
-              className="form__input"
               type="number"
               min="1"
               max="8"
@@ -79,7 +83,9 @@ function ReservationForm() {
               onChange={handleChange}
               required
             />
-            <span className="guests-input-error form__error">
+            <span
+              className={`form__input-error ${errors.guests ? "form-input-error_visible " : ""}`}
+            >
               {errors.guests}
             </span>
           </label>
@@ -87,14 +93,16 @@ function ReservationForm() {
             Date & Time *
             <input
               id="datetime-input"
-              className="form__input"
+              className={`form__input ${errors.name ? "form-input_type-error" : ""}`}
               type="datetime-local"
               name="date"
               value={values.date}
               onChange={handleChange}
               required
             />
-            <span className="datetime-input-error form__error">
+            <span
+              className={`form__input-error ${errors.date ? "form-input-error_visible " : ""}`}
+            >
               {errors.date}
             </span>
           </label>
@@ -102,7 +110,7 @@ function ReservationForm() {
             Your email *
             <input
               id="email-input"
-              className="form__input"
+              className={`form__input ${errors.name ? "form__input_type-error" : ""}`}
               type="email"
               placeholder="email@email.com"
               name="email"
@@ -110,7 +118,9 @@ function ReservationForm() {
               onChange={handleChange}
               required
             />
-            <span className="email-input-error form__error">
+            <span
+              className={`form__input-error ${errors.email ? "form-input-error_visible " : ""}`}
+            >
               {errors.email}
             </span>
           </label>
@@ -126,13 +136,17 @@ function ReservationForm() {
             id="checkbox"
             name="isChecked"
             checked={values.isChecked}
-            className="form__checkbox"
+            className={` form__checkbox form__input ${errors.name ? "form__input_type-error" : ""}`}
             onChange={handleChange}
             type="checkbox"
             required
           />
           I agree with the terms of use
-          <span className="checkbox-error form__error">{errors.isChecked}</span>
+          <span
+            className={`form__input-error ${errors.isChecked ? "form__input-error_visible " : ""}`}
+          >
+            {errors.isChecked}
+          </span>
         </label>
       </form>
     </section>
