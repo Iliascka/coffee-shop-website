@@ -24,7 +24,7 @@ function ReservationForm() {
     guests: "",
     date: "",
     email: "",
-    isChecked: "",
+    isChecked: false,
   });
 
   const newErrors = {
@@ -52,7 +52,7 @@ function ReservationForm() {
           <label htmlFor="name-input" className="form__label">
             Name *
             <input
-              className={`form__input ${errors.name ? "form-input_type-error" : ""}`}
+              className={`form__input ${errors.name ? "form__input_type-error" : ""}`}
               id="name-input"
               type="text"
               placeholder="Name Surname"
@@ -72,7 +72,7 @@ function ReservationForm() {
           <label htmlFor="guests-input" className="form__label">
             Number of Guests *
             <input
-              className={`form__input ${errors.name ? "form-input_type-error" : ""}`}
+              className={`form__input ${errors.name ? "form__input_type-error" : ""}`}
               id="guests-input"
               type="number"
               min="1"
@@ -93,7 +93,7 @@ function ReservationForm() {
             Date & Time *
             <input
               id="datetime-input"
-              className={`form__input ${errors.name ? "form-input_type-error" : ""}`}
+              className={`form__input ${errors.name ? "form__input_type-error" : ""}`}
               type="datetime-local"
               name="date"
               value={values.date}
@@ -128,26 +128,30 @@ function ReservationForm() {
         <button type="sumbit" className="form__button">
           Book a table
         </button>
-        <label
-          htmlFor="checkbox"
-          className="form__label form__label_type_checkbox"
-        >
-          <input
-            id="checkbox"
-            name="isChecked"
-            checked={values.isChecked}
-            className={` form__checkbox form__input ${errors.name ? "form__input_type-error" : ""}`}
-            onChange={handleChange}
-            type="checkbox"
-            required
-          />
-          I agree with the terms of use
-          <span
-            className={`form__input-error ${errors.isChecked ? "form__input-error_visible " : ""}`}
-          >
-            {errors.isChecked}
-          </span>
-        </label>
+        <div className="form__checkbox-wrapper">
+          <div className="form__checkbox-content">
+            <label
+              htmlFor="checkbox"
+              className="form__label form__label_type_checkbox"
+            >
+              <input
+                id="checkbox"
+                name="isChecked"
+                checked={values.isChecked}
+                className={` form__checkbox form__input ${errors.name ? "form__input_type-error" : ""}`}
+                onChange={handleChange}
+                type="checkbox"
+                required
+              />
+              I agree with the terms of use
+            </label>
+            <span
+              className={`form__input-error form__checkbox-error ${errors.isChecked ? "form-input-error_visible " : ""}`}
+            >
+              {errors.isChecked}
+            </span>
+          </div>
+        </div>
       </form>
     </section>
   );
