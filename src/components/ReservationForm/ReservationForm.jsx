@@ -17,6 +17,41 @@ function ReservationForm() {
       ...currentValues,
       [name]: type === "checkbox" ? checked : value,
     }));
+
+    if (name === "name") {
+      setErrors((currentErrors) => ({
+        ...currentErrors,
+        name:
+          value.trim().length < 4 ? "Name must be at least 4 characters" : "",
+      }));
+    }
+    if (name === "email") {
+      setErrors((currentErrors) => ({
+        ...currentErrors,
+        email:
+          value.trim().length < 4 || !value.includes("@")
+            ? "Please provide a valid email"
+            : "",
+      }));
+    }
+    if (name === "guests") {
+      setErrors((currentErrors) => ({
+        ...currentErrors,
+        guests: value === "" ? "Please select guests" : "",
+      }));
+    }
+    if (name === "date") {
+      setErrors((currentErrors) => ({
+        ...currentErrors,
+        date: value === "" ? "Please provide the date" : "",
+      }));
+    }
+    if (name === "isChecked") {
+      setErrors((currentErrors) => ({
+        ...currentErrors,
+        isChecked: !checked ? "Please accept the terms" : "",
+      }));
+    }
   }
 
   const [errors, setErrors] = useState({
