@@ -75,13 +75,15 @@ function ReservationForm() {
 
     setErrors(newErrors);
 
-    setValues({
-      name: "",
-      guests: "",
-      date: "",
-      email: "",
-      isChecked: false,
-    });
+    if (isFormValid) {
+      setValues({
+        name: "",
+        guests: "",
+        date: "",
+        email: "",
+        isChecked: false,
+      });
+    }
   }
 
   const isFormValid =
