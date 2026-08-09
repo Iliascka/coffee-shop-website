@@ -1,32 +1,43 @@
-git# React + Vite
+# Coffee Shop — React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A coffee shop website originally built with HTML, CSS, and vanilla JavaScript,
+then converted to React with a component-based structure and React form validation.
 
-Currently, two official plugins are available:
+## Sections
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Header / Navigation**
+  Navigation links connect to the different sections of the page.
 
-## React Compiler
+- **Recipes**
+  Displays coffee recipes and embedded recipe videos.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Reservation Form**
+  A controlled React form with state-based validation, error messages,
+  checkbox validation, and form reset after successful submission.
 
-## Expanding the ESLint configuration
+- **Menu**
+  Displays the café menu using structured cards and BEM classes.
 
-- **Menu**  
-  A multi-column café menu built with Flexbox, list dividers, and BEM classes.
+- **About**
+  Information about the coffee shop with animated decorative elements.
 
-- **About / Contacts**  
-  Provides information about the café and includes animated decorative elements created with CSS keyframes.
+- **Footer**
+  Contains the café branding and social links.
 
 ## Project features
 
+- React
+- Vite
+- Component-based architecture
+- React state management
+- Controlled form inputs
+- Form validation and error handling
+- Conditional form submission
 - Semantic HTML5
+- BEM methodology
 - Flexbox
-- Positioning
-- Flat BEM file structure
-- JavaScript form validation
-- CSS animation and transform
+- CSS animations and transforms
+- Component-specific CSS
 
 ## Project Preview
 
