@@ -72,8 +72,25 @@ function ReservationForm() {
 
   function handleSubmit(evt) {
     evt.preventDefault();
+
     setErrors(newErrors);
+
+    setValues({
+      name: "",
+      guests: "",
+      date: "",
+      email: "",
+      isChecked: false,
+    });
   }
+
+  const isFormValid =
+    values.name.trim().length >= 4 &&
+    values.guests !== "" &&
+    values.date !== "" &&
+    values.email.trim().length >= 4 &&
+    values.email.includes("@") &&
+    values.isChecked;
 
   return (
     <section id="book-a-table" className="reservation">
@@ -107,7 +124,7 @@ function ReservationForm() {
           <label htmlFor="guests-input" className="form__label">
             Number of Guests *
             <input
-              className={`form__input ${errors.name ? "form__input_type-error" : ""}`}
+              className={`form__input ${errors.guests ? "form__input_type-error" : ""}`}
               id="guests-input"
               type="number"
               min="1"
@@ -128,7 +145,7 @@ function ReservationForm() {
             Date & Time *
             <input
               id="datetime-input"
-              className={`form__input ${errors.name ? "form__input_type-error" : ""}`}
+              className={`form__input ${errors.date ? "form__input_type-error" : ""}`}
               type="datetime-local"
               name="date"
               value={values.date}
@@ -145,7 +162,7 @@ function ReservationForm() {
             Your email *
             <input
               id="email-input"
-              className={`form__input ${errors.name ? "form__input_type-error" : ""}`}
+              className={`form__input ${errors.email ? "form__input_type-error" : ""}`}
               type="email"
               placeholder="email@email.com"
               name="email"
@@ -160,7 +177,10 @@ function ReservationForm() {
             </span>
           </label>
         </fieldset>
-        <button type="sumbit" className="form__button">
+        <button
+          type="submit"
+          className={`form__button ${!isFormValid ? "form__button_disabled" : ""}`}
+        >
           Book a table
         </button>
         <div className="form__checkbox-wrapper">
