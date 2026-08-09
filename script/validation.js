@@ -1,3 +1,6 @@
+//This was the original vanilla JavaScript form validation.
+// Replaced by React state-based validation in ReservationForm//
+
 // const settings = {
 //   formSelector: ".form",
 //   inputSelector: ".form__input",
