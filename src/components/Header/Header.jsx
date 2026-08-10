@@ -1,5 +1,7 @@
 import "./Header.css";
 import Nav from "../Nav/Nav";
+import insideCoffeeShop from "../../../images/inside_coffee_shop.png";
+
 function Header() {
   return (
     <header className="header">
@@ -13,7 +15,7 @@ function Header() {
         cozy vibes to help you get creative.
       </p>
       <img
-        src="./images/inside_coffee_shop.png"
+        src={insideCoffeeShop}
         alt="Coffee Shop Image"
         className="header__image"
       />

@@ -1,11 +1,14 @@
 import "./Footer.css";
+import logoLight from "../../../images/logo_coffeeshop_light.svg";
+import facebookWhite from "../../../images/facebook_white.svg";
+import instagramWhite from "../../../images/instagram_white.svg";
 
 function Footer() {
   return (
     <footer id="contacts" className="footer">
       <div className="footer__content">
         <img
-          src="./images/logo_coffeeshop_light.svg"
+          src={logoLight}
           alt="Triple Peaks logo coffeeshop"
           className="footer__logo"
         />
@@ -15,7 +18,7 @@ function Footer() {
             <li className="footer__list-item">
               <a href="#" className="footer__social-link">
                 <img
-                  src="./images/facebook_white.svg"
+                  src={facebookWhite}
                   alt="Facebook-icon"
                   className="footer__social-icon"
                 />
@@ -25,7 +28,7 @@ function Footer() {
             <li className="footer__list-item">
               <a href="#" className="footer__social-link">
                 <img
-                  src="./images/instagram_white.svg"
+                  src={instagramWhite}
                   alt="Instagram-icon"
                   className="footer__social-icon"
                 />
@@ -35,7 +38,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <p className="footer__copyright">&copy; 2025 Ilias Katsantonis</p>
+      <p className="footer__copyright">&copy; 2026 Ilias Katsantonis</p>
     </footer>
   );
 }

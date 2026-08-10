@@ -1,13 +1,10 @@
 import "./Nav.css";
+import logoDark from "../../../images/logo_coffeeshop_dark.svg";
 
 function Nav() {
   return (
     <nav className="nav">
-      <img
-        src="./images/logo_coffeeshop_dark.svg"
-        alt="Logo-coffeeshop"
-        className="nav__logo"
-      />
+      <img src={logoDark} alt="Logo-coffeeshop" className="nav__logo" />
       <ul className="nav__links">
         <li>
           <a className="nav__link" href="#recipes">
