@@ -1,7 +1,6 @@
-# Coffee Shop — React
+Coffee Shop - React
 
-A coffee shop website originally built with HTML, CSS, and vanilla JavaScript,
-then converted to React with a component-based structure and React form validation.
+A coffee shop website originally built with HTML, CSS, and vanilla JavaScript, then converted to React with a component-based structure and React form validation.
 
 ## Sections
 
@@ -12,8 +11,7 @@ then converted to React with a component-based structure and React form validati
   Displays coffee recipes and embedded recipe videos.
 
 - **Reservation Form**
-  A controlled React form with state-based validation, error messages,
-  checkbox validation, and form reset after successful submission.
+  A controlled React form with state-based validation, error messages, checkbox validation, and form reset after successful submission.
 
 - **Menu**
   Displays the café menu using structured cards and BEM classes.
@@ -22,9 +20,9 @@ then converted to React with a component-based structure and React form validati
   Information about the coffee shop with animated decorative elements.
 
 - **Footer**
-  Contains the café branding and social links.
+  Contains the café branding and links to my GitHub and LinkedIn profiles.
 
-## Project features
+## Technologies and Features
 
 - React
 - Vite
@@ -53,6 +51,6 @@ then converted to React with a component-based structure and React form validati
 
 ![Menu & Footer](images/c_menu&footer.png)
 
-## GitHub Page
+## Live Demo
 
-https://iliascka.github.io/coffee-shop-website/
+[View Coffee Shop Website](https://iliascka.github.io/coffee-shop-website/)
