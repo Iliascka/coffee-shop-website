@@ -52,6 +52,8 @@
   width: 16px;
   height: 16px;
   margin: 0 10px 0 0;
+  background-color: rgba(255, 255, 255, 0.822);
+  border-radius: 4px;
 }
 
 .footer__copyright {

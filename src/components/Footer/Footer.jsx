@@ -1,7 +1,7 @@
 import "./Footer.css";
 import logoLight from "../../../images/logo_coffeeshop_light.svg";
-import facebookWhite from "../../../images/facebook_white.svg";
-import instagramWhite from "../../../images/instagram_white.svg";
+import github from "../../../images/github.svg";
+import LinkedIn from "../../../images/LinkedIn.svg";
 
 function Footer() {
   return (
@@ -13,26 +13,36 @@ function Footer() {
           className="footer__logo"
         />
         <div className="footer__column">
-          <h4 className="footer__social-heading">Social media</h4>
+          <h4 className="footer__social-heading">Connect With Me</h4>
           <ul className="footer__list">
             <li className="footer__list-item">
-              <a href="#" className="footer__social-link">
+              <a
+                href="https://github.com/Iliascka"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__social-link"
+              >
                 <img
-                  src={facebookWhite}
+                  src={github}
                   alt="Facebook-icon"
                   className="footer__social-icon"
                 />
-                Facebook
+                GitHub
               </a>
             </li>
             <li className="footer__list-item">
-              <a href="#" className="footer__social-link">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="http://www.linkedin.com/in/ilias-katsantonis"
+                className="footer__social-link"
+              >
                 <img
-                  src={instagramWhite}
+                  src={LinkedIn}
                   alt="Instagram-icon"
                   className="footer__social-icon"
                 />
-                Instagram
+                LinkedIn
               </a>
             </li>
           </ul>
