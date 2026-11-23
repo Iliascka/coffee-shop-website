@@ -37,7 +37,13 @@ function ReservationForm() {
     if (name === "guests") {
       setErrors((currentErrors) => ({
         ...currentErrors,
-        guests: value === "" ? "Please select guests" : "",
+        guests:
+          value === "" ||
+          !Number.isInteger(Number(value)) ||
+          Number(value) < 1 ||
+          Number(value) > 8
+            ? "Please enter between 1 and 8 whole-number guests"
+            : "",
       }));
     }
     if (name === "date") {
@@ -89,6 +95,9 @@ function ReservationForm() {
   const isFormValid =
     values.name.trim().length >= 4 &&
     values.guests !== "" &&
+    Number.isInteger(Number(values.guests)) &&
+    Number(values.guests) >= 1 &&
+    Number(values.guests) <= 8 &&
     values.date !== "" &&
     values.email.trim().length >= 4 &&
     values.email.includes("@") &&
@@ -181,6 +190,7 @@ function ReservationForm() {
         </fieldset>
         <button
           type="submit"
+          disabled={!isFormValid}
           className={`form__button ${!isFormValid ? "form__button_disabled" : ""}`}
         >
           Book a table
